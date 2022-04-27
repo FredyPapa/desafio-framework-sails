@@ -1,26 +1,44 @@
-# desafio-producto
+# Reformar para usar otro Framework - Sails
 
-a [Sails v1](https://sailsjs.com) application
+## Validaciones:
 
+### Insertamos el primer producto
+#### POST
+#### URL: http://localhost:1337/productos
+~~~
+{
+    "title":"Producto 01",
+    "price":"1500",
+    "thumbnail":"https://pcsystemo.com/wp-content/uploads/2016/04/pcsystemo-productos-2.jpg"
+}
+~~~
 
-### Links
+### Insertamos el segundo producto
+#### POST
+#### URL: http://localhost:1337/productos
+~~~
+{
+    "title":"Producto 02",
+    "price":"500",
+    "thumbnail":"https://pcsystemo.com/wp-content/uploads/2016/04/pcsystemo-productos-2.jpg"
+}
+~~~
 
-+ [Sails framework documentation](https://sailsjs.com/get-started)
-+ [Version notes / upgrading](https://sailsjs.com/documentation/upgrading)
-+ [Deployment tips](https://sailsjs.com/documentation/concepts/deployment)
-+ [Community support options](https://sailsjs.com/support)
-+ [Professional / enterprise options](https://sailsjs.com/enterprise)
+### Consultamos el listado de productos
+#### GET
+#### URL: http://localhost:1337/productos
 
+### Actualizamos el producto con Id 1
+#### PUT
+#### URL: http://localhost:1337/productos/1
+~~~
+{
+    "title":"Producto FF",
+    "price":"5500",
+    "thumbnail":"https://pcsystemo.com/wp-content/uploads/2016/04/pcsystemo-productos-2.jpg"
+}
+~~~
 
-### Version info
-
-This app was originally generated on Wed Apr 27 2022 18:11:24 GMT-0500 (hora estándar de Perú) using Sails v1.5.2.
-
-<!-- Internally, Sails used [`sails-generate@2.0.6`](https://github.com/balderdashy/sails-generate/tree/v2.0.6/lib/core-generators/new). -->
-
-
-
-<!--
-Note:  Generators are usually run using the globally-installed `sails` CLI (command-line interface).  This CLI version is _environment-specific_ rather than app-specific, thus over time, as a project's dependencies are upgraded or the project is worked on by different developers on different computers using different versions of Node.js, the Sails dependency in its package.json file may differ from the globally-installed Sails CLI release it was originally generated with.  (Be sure to always check out the relevant [upgrading guides](https://sailsjs.com/upgrading) before upgrading the version of Sails used by your app.  If you're stuck, [get help here](https://sailsjs.com/support).)
--->
-
+### Eliminamos el producto con Id 1
+#### DELETE
+#### URL: http://localhost:1337/productos/1
