@@ -39,6 +39,3 @@
 }
 ~~~
 
-### Eliminamos el producto con Id 1
-#### DELETE
-#### URL: http://localhost:1337/productos/1
